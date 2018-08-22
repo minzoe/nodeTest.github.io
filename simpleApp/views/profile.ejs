@@ -1,27 +1,12 @@
+<% include partials/header %>
+<% include partials/navigation %>
 <main>
-    <div id="profile">
-        <img src="{{avatarUrl}}" alt="Avatar" id="avatar">
-        <p>
-            <span>{{username}}</span>
-        </p>
-        <ul>
-            <li>
-                <span>{{badges}}</span> Badges earned</li>
-            <li>
-                <span>{{javascript}}</span> JavaScript points</li>
-            <li>
-                <a href="/">search again</a>
-            </li>
-        </ul>
-    </div>
-
     <div>
-        <p>{{results}}</p>
         <ul>
-            <% for (key in results) {%>
-            <li>{{@key}}</li>
-            <% } %>
+            <% results.forEach((post) => { %>
+                <li><%= post.name %></li>
+            <% }) %>
         </ul>
-
     </div>
 </main>
+<% include partials/footer %>
