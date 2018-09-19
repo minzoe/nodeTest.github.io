@@ -1,13 +1,16 @@
+<% include partials/header %>
+<% include partials/navigation %>
 <main>
     <img src="http://simpleicon.com/wp-content/uploads/magnifier-7-256x256.png" alt="Magnifying Glass" id="searchIcon">
     <form action="/" method="POST">
         <select id="type" name="type">
             <option disabled hidden selected>Search By</option>
-            <option value="level">Level</option>    
-            <option value="classes">Caster Class</option>    
-            <option value="name">Name of Spell</option>    
+            <option value="level">Level</option>
+            <option value="classes">Caster Class</option>
+            <option value="name">Name of Spell</option>
         </select>
         <input type="text" id="qVal" name="qVal">
         <input type="submit" value="search" class="button">
     </form>
 </main>
+<% include partials/footer %>

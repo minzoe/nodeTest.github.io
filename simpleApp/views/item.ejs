@@ -1,0 +1,21 @@
+<% include partials/header %>
+<% include partials/navigation %>
+<main>
+    <div>
+        <ul>
+            <li><%= results.name %></li>
+            <li><%= results.desc %> <%= results.higher_level %></li>
+            <li><%= results.range %></li>
+            <li><%= results.components %></li>
+            <li><%= results.material %></li>
+            <li><%= results.ritual %></li>
+            <li><%= results.duration %></li>
+            <li><%= results.concentration %></li>
+            <li><%= results.casting_time %></li>
+            <li><%= results.level %></li>
+            <li><%= results.school.name %></li>
+            <li><% results.classes.forEach((post) => { %> <%= post.name %> <% }) %></li>
+        </ul>
+    </div>
+</main>
+<% include partials/footer %>

@@ -3,8 +3,10 @@
 <main>
     <div>
         <ul>
-            <% results.forEach((post) => { %>
-                <li><%= post.name %></li>
+            <% results.forEach((post) => {
+                var index = post.url.slice(post.url.indexOf('spells/') + 7);
+            %>
+            <li><a href="/index=<%= index %>"><%= post.name %></a></li>
             <% }) %>
         </ul>
     </div>
